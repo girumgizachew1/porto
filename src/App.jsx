@@ -32,16 +32,20 @@ export default function App() {
           />
         </Canvas>
         <Overlay fill={fill} />
-    
-        </a.main>
-        <a.main style={{ backgroundColor:'#f0f0f0' }}>
-          <div className="h-full w-full">
-            <Projects fill={fill}  />
-            <Contact/>
-          </div>
-          
-        </a.main>
-        
-      </>
-      );
+
+      </a.main>
+      <a.main style={{ backgroundColor: '#f0f0f0' }}>
+        <div className="h-full w-full">
+          <Projects fill={fill} />
+
+        </div>
+
+      </a.main>
+      <a.main style={{ background } } className='h-20' >
+
+        <Contact />
+      </a.main>
+
+    </>
+  );
 }

@@ -65,7 +65,7 @@ function Projects({ fill }) {
 
   return (
     <div className="flex flex-row-reverse mx-32 py-20 h-full" style={{ backgroundColor:'#f0f0f0' }}>
-      <div className="basis-1/6 mx-4 flex items-center ">
+      <div className="basis-1/6 mx-4 flex items-center bg-zinc-900">
         {/* List of projects */}
         <div className="project-list flex flex-col space-y-2">
           <h1 className='text-5xl font-bold text-orange-300' >Projects</h1>
@@ -73,7 +73,7 @@ function Projects({ fill }) {
             <button
               key={index}
               onClick={() => handleProjectClick(project)}
-              className={`project-item text-xl text-white px-10 rounded-sm ${selectedProject && selectedProject.name == project.name ? 'text-zinc-800' : 'text-zinc-600'}`}
+              className={`project-item text-xl text-white px-10 rounded-sm ${selectedProject && selectedProject.name == project.name ? 'text-zinc-300' : 'text-zinc-500'}`}
               
             >
               {project.name}
