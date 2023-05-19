@@ -1,11 +1,12 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, lazy } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { useSpring } from '@react-spring/core';
 import { a } from '@react-spring/web';
 import Overlay from './Overlay';
 import Scene from './Scene';
-import Projects from './Components/Projects';
+
+const Projects = lazy(() => import('./Components/Projects'));
 
 export default function App() {
   // This spring controls the background and the svg fill (text color)

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { a } from '@react-spring/web';
-import Live from '../Live';
+
 
 function Projects({ fill }) {
 
@@ -8,6 +8,7 @@ function Projects({ fill }) {
     {
       name: "Watch Config",
       desktopView: "/WatchDesktop.png",
+      mobileView: '/WatchPhone.jpg',
       performanceScore: '92',
       description: "Watch Config is a 3D watch customizer that allows users to customize and preview a watch in real-time. Users can choose the watch model, color, material, and other specifications to see how the watch will look like before they buy it. The project uses Three.js to create the 3D models and the customizer interface. The development process of Watch Config involved creating a React application that integrates with a Three.js customizer module. The customizer module handles the 3D model creation and manipulation based on user inputs, while the React app manages the state and user interface components.",
       developmentTechnology: "React, Three.js, WebGL",
