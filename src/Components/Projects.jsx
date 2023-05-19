@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
 import { a } from '@react-spring/web';
+import Live from '../Live';
 
 function Projects({ fill }) {
-  const [selectedProject, setSelectedProject] = useState(null);
-
-  const handleProjectClick = (project) => {
-    setSelectedProject(project);
-  };
 
   const projectList = [
     {
       name: "Watch Config",
-      desktopView: "/webp/watchconfig.png",
+      desktopView: "/WatchDesktop.png",
       performanceScore: '92',
       description: "Watch Config is a 3D watch customizer that allows users to customize and preview a watch in real-time. Users can choose the watch model, color, material, and other specifications to see how the watch will look like before they buy it. The project uses Three.js to create the 3D models and the customizer interface. The development process of Watch Config involved creating a React application that integrates with a Three.js customizer module. The customizer module handles the 3D model creation and manipulation based on user inputs, while the React app manages the state and user interface components.",
       developmentTechnology: "React, Three.js, WebGL",
@@ -29,13 +25,26 @@ function Projects({ fill }) {
     },
   ]
 
+  const [selectedProject, setSelectedProject] = useState(projectList[0]);
+
+  const handleProjectClick = (project) => {
+    setSelectedProject(project);
+  };
+
+
   return (
-    <div className="flex flex-row-reverse mx-32 my-20">
-      <div className="basis-1/6">
+    <div className="flex flex-row-reverse mx-32 py-20 h-full" style={{ backgroundColor:'#f0f0f0' }}>
+      <div className="basis-1/6 mx-4 flex items-center ">
         {/* List of projects */}
-        <ul>
+        <ul className="project-list flex flex-col space-y-2">
+          <h1 className='text-5xl font-bold' >Projects</h1>
           {projectList.map((project, index) => (
-            <li key={index} onClick={() => handleProjectClick(project)} style={{ cursor: 'pointer' }}>
+            <li
+              key={index}
+              onClick={() => handleProjectClick(project)}
+              className={`project-item text-xl text-white px-10 rounded-sm ${selectedProject && selectedProject.name == project.name ? 'bg-orange-400' : 'bg-orange-300'}`}
+              
+            >
               {project.name}
             </li>
           ))}
@@ -68,12 +77,10 @@ function Projects({ fill }) {
                 </div>
                 <div className='flex space-x-4 mt-4' >
                   <div>
-                    <h3>Mobile View:</h3>
                     <img src={selectedProject.mobileView} alt="Mobile View" />
                   </div>
 
                   <div>
-                    <h3>Desktop View:</h3>
                     <img src={selectedProject.desktopView} alt="Desktop View" />
                   </div>
                 </div>
@@ -83,7 +90,11 @@ function Projects({ fill }) {
               </div>
             </div>
           ) : (
-            <div>Please select a project</div>
+            <div className='w-full h-[90vh]' >
+              <h1>
+                Please select a project
+              </h1>
+             </div>
           )}
         </div>
       </div>

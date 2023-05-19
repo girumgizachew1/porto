@@ -33,7 +33,7 @@ export default function App() {
     
         </a.main>
         <a.main style={{ backgroundColor:'#f0f0f0' }}>
-          <div className="h-screen w-full">
+          <div className="h-full w-full">
             <Projects fill={fill}  />
           </div>
 
