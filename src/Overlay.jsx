@@ -30,7 +30,7 @@ export default function Overlay({ fill }) {
           <tspan x={40} y={362.909} children="Web Developer" />
           <tspan x={40} y={403.909} children="Expert in professional Frontend" />
           <tspan x={40} y={444.909} children="development " />
-       </text>
+        </text>
         <text style={{ whiteSpace: 'pre' }} fontFamily="Inter" fontSize={10.5} fontWeight={500} letterSpacing="0em">
           <tspan x={326} y={640.318} children="Let your Project Speak about you" />
         </text>

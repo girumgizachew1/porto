@@ -5,6 +5,7 @@ import { useSpring } from '@react-spring/core';
 import { a } from '@react-spring/web';
 import Overlay from './Overlay';
 import Scene from './Scene';
+import Projects from './Components/Projects';
 
 export default function App() {
   // This spring controls the background and the svg fill (text color)
@@ -31,9 +32,9 @@ export default function App() {
         <Overlay fill={fill} />
     
         </a.main>
-        <a.main style={{ background }}>
-          <div className="canvas text-red-600 h-screen w-full">
-            projects
+        <a.main style={{ backgroundColor:'#f0f0f0' }}>
+          <div className="h-screen w-full">
+            <Projects fill={fill}  />
           </div>
 
         </a.main>
