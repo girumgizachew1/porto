@@ -6,8 +6,14 @@ export default function Overlay({ fill }) {
   return (
     <div className="overlay">
       <a.svg viewBox="0 0 583 720" fill={fill} xmlns="http://www.w3.org/2000/svg">
-        <path fill="#E8B059" d="M50.5 61h9v9h-9zM50.5 50.5h9v9h-9zM40 50.5h9v9h-9z" />
-        <path fillRule="evenodd" clipRule="evenodd" d="M61 40H50.5v9H61v10.5h9V40h-9z" fill="#E8B059" />
+        {/* Regular G */}
+
+        <g transform="rotate(-45 50 50) translate(-10)">
+          <path fill="#E8B059" d="M50.5 61h9v9h-9zM50.5 50.5h9v9h-9zM40 50.5h9v9h-9z" />
+        </g>
+        <g transform="rotate(-135 50 50)">
+          <path fill="#E8B059" d="M50.5 61h9v9h-9zM50.5 50.5h9v9h-9zM40 50.5h9v9h-9z" />
+        </g>
         <text style={{ whiteSpace: 'pre' }} fontFamily="Inter" fontSize={10} fontWeight="bold" letterSpacing="-.02em">
           <tspan x={328} y={46.182} children="skills" />
         </text>
@@ -26,7 +32,7 @@ export default function Overlay({ fill }) {
           <tspan x={40} y={270.909} />
         </text>
         <text style={{ whiteSpace: 'pre' }} fontFamily="Inter" fontSize={36} fontWeight="bold" letterSpacing="0em">
-          <tspan x={40} y={321.909} children="I am a Fullstack Web  " />   
+          <tspan x={40} y={321.909} children="I am a Fullstack Web  " />
           <tspan x={40} y={362.909} children="Developer" />
           <tspan x={40} y={403.909} children="Expert in professional Frontend" />
           <tspan x={40} y={444.909} children="development " />
