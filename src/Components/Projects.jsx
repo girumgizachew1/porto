@@ -70,22 +70,40 @@ function Projects({ fill }) {
 
 
   return (
-    <div className="flex flex-col-reverse md:flex-row-reverse mx-4 md:mx-32 md:py-20 h-full" style={{ backgroundColor: '#f0f0f0' }}>
+    <div className="flex flex-col md:flex-row-reverse mx-4 md:mx-32 md:py-20 h-full" style={{ backgroundColor: '#f0f0f0' }}>
       <div className="basis-1/6 mx-4 flex items-center md:bg-zinc-900">
         {/* List of projects */}
-        <div className="project-list flex flex-col space-y-2">
-          <h1 className='text-2xl md:text-5xl font-bold text-orange-300' >Projects</h1>
+        <div className="project-list flex md:flex-col space-y-2">
+      <h1 className='text-2xl md:text-5xl font-bold text-orange-300'>Projects</h1>
+      <div className="dropdown sm:hidden">
+        <select
+          value={selectedProject ? selectedProject.name : ''}
+          onChange={(e) => {
+            const projectName = e.target.value;
+            const selected = projectList.find((project) => project.name === projectName);
+            handleProjectClick(selected);
+          }}
+          className="project-select projectbuttton border-b border-orange-400 text-base text-white px-10 rounded-sm"
+        >
           {projectList.map((project, index) => (
-            <button
-              key={index}
-              onClick={() => handleProjectClick(project)}
-              className={`projectbuttton border-b border-zinc-700 text-xl text-white px-10 rounded-sm ${selectedProject && selectedProject.name == project.name ? 'text-zinc-300' : 'text-zinc-500'}`}
-
-            >
+            <option key={index} value={project.name}>
               {project.name}
-            </button>
+            </option>
           ))}
-        </div>
+        </select>
+      </div>
+      <div className="hidden md:flex flex-col space-y-2">
+        {projectList.map((project, index) => (
+          <button
+            key={index}
+            onClick={() => handleProjectClick(project)}
+            className={`projectbuttton border-b border-zinc-700 text-xl text-white px-10 rounded-sm ${selectedProject && selectedProject.name === project.name ? 'text-zinc-300' : 'text-zinc-500'}`}
+          >
+            {project.name}
+          </button>
+        ))}
+      </div>
+    </div>
       </div>
       <div className="basis-5/6 w-full">
         {/* Project details */}
