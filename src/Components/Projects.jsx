@@ -6,7 +6,7 @@ import { FiGithub } from "react-icons/fi";
 function Projects({ fill }) {
 
   const projectList = [
-        {
+    {
       name: "Gdev Webbuilder",
       desktopView: "/WebbuilderDesktop.png",
       mobileView: '/index.jpg',
@@ -15,7 +15,7 @@ function Projects({ fill }) {
       developmentTechnology: "React, Firebase",
       githubLink: "",
       websiteLink: "https://ethiopiaye.netlify.app/"
-    },{
+    }, {
       name: "Gnote",
       desktopView: "/WatchDesktop.jpg",
       mobileView: '/WatchPhone.jpg',
@@ -57,14 +57,20 @@ function Projects({ fill }) {
   ]
 
   const [selectedProject, setSelectedProject] = useState(projectList[0]);
+  const [isLoading, setIsLoading] = useState(false); // Add loading state
 
   const handleProjectClick = (project) => {
+    setIsLoading(true); // Set loading state to true
     setSelectedProject(project);
+    // Simulate delay for demonstration purposes
+    setTimeout(() => {
+      setIsLoading(false); // Set loading state to false after the delay
+    }, 1000);
   };
 
 
   return (
-    <div className="flex flex-row-reverse mx-32 py-20 h-full" style={{ backgroundColor:'#f0f0f0' }}>
+    <div className="flex flex-row-reverse mx-32 py-20 h-full" style={{ backgroundColor: '#f0f0f0' }}>
       <div className="basis-1/6 mx-4 flex items-center bg-zinc-900">
         {/* List of projects */}
         <div className="project-list flex flex-col space-y-2">
@@ -73,8 +79,8 @@ function Projects({ fill }) {
             <button
               key={index}
               onClick={() => handleProjectClick(project)}
-              className={`project-item text-xl text-white px-10 rounded-sm ${selectedProject && selectedProject.name == project.name ? 'text-zinc-300' : 'text-zinc-500'}`}
-              
+              className={`projectbuttton border-b border-zinc-700 text-xl text-white px-10 rounded-sm ${selectedProject && selectedProject.name == project.name ? 'text-zinc-300' : 'text-zinc-500'}`}
+
             >
               {project.name}
             </button>
@@ -84,7 +90,13 @@ function Projects({ fill }) {
       <div className="basis-5/6 w-full">
         {/* Project details */}
         <div fill={fill}>
-          {selectedProject ? (
+          {isLoading ? ( // Display loading bar while loading
+            <div className="flex justify-center items-center h-[90vh]">
+
+              <div className='loading' ></div>
+              {/* Add animation or progress indicator here */}
+            </div>
+          ) : selectedProject ? (
             <div>
               <h2 className='text-5xl font-bold text-zinc-900' >{selectedProject.name}</h2>
 
@@ -101,7 +113,7 @@ function Projects({ fill }) {
                     <div>
 
                       <a href={selectedProject.githubLink} target="_blank" rel="noopener noreferrer">
-                         <FiGithub className='w-10 h-10'/> 
+                        <FiGithub className='w-10 h-10' />
                       </a>
                     </div>
                   </div>
@@ -125,7 +137,7 @@ function Projects({ fill }) {
               <h1>
                 Please select a project
               </h1>
-             </div>
+            </div>
           )}
         </div>
       </div>
