@@ -3,8 +3,8 @@ import { FiGithub, FiCoffee, FiLinkedin } from 'react-icons/fi';
 
 function Contact() {
   return (
-    <div className="flex w-full flex-col md:flex-row  align-center justify-center md:justify-between md:px-20 h-20">
-      <div className="flex space-x-8 py-5">
+    <div className="flex w-full flex-col md:flex-row  align-center justify-between md:px-20 h-20">
+      <div className="flex space-x-8 py-5 mx-auto">
         <a
           href="https://github.com/girumgizachew1"
           target="_blank"
@@ -31,7 +31,7 @@ function Contact() {
           <FiLinkedin className="animate-pulse text-orange-400 w-6 h-6" />
         </a>
       </div>
-      <div className="mt-4">
+      <div className="mt-4 mx-auto">
         <a
           href='./girumresume.pdf'
           download="girumresume.pdf"

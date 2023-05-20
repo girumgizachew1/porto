@@ -15,7 +15,7 @@ export default function Overlay({ fill }) {
           <path fill="#E8B059" d="M50.5 61h9v9h-9zM50.5 50.5h9v9h-9zM40 50.5h9v9h-9z" />
         </g>
         <text style={{ whiteSpace: 'pre' }} fontFamily="Inter" fontSize={10} fontWeight="bold" letterSpacing="-.02em">
-          <tspan x={328} y={46.182} children="skills" />
+          <tspan x={328} y={46.182} children="Expert at" />
         </text>
         <text style={{ whiteSpace: 'pre' }} fontFamily="Inter" fontSize={16} fontWeight="bold" letterSpacing="-.02em">
           <tspan x={392} y={46.182} children="React " />
