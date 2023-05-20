@@ -26,7 +26,7 @@ export default function Overlay({ fill }) {
           <tspan x={10} y={175.318} children="Girum Gizachew " />
         </text>
         <text fill="#E8B059" style={{ whiteSpace: 'pre' }} fontFamily="Inter" fontSize={42} fontWeight="bold" letterSpacing="0em">
-          <tspan x={10} y={227.909} children={'Senior Frontend Developer \u2014'} />
+          <tspan x={10} y={227.909} children={'Frontend Developer \u2014'} />
         </text>
         <text style={{ whiteSpace: 'pre' }} fontFamily="Inter" fontSize={28} fontWeight="bold" letterSpacing="0em">
           <tspan x={40} y={270.909} />
