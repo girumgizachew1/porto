@@ -3,15 +3,15 @@ import { FiGithub, FiCoffee, FiLinkedin } from 'react-icons/fi';
 
 function Contact() {
   return (
-    <div className="flex w-full flex-col md:flex-row space-x-10 align-center justify-between px-20 h-20">
-      <div className="flex space-x-8">
+    <div className="flex w-full flex-col md:flex-row  align-center justify-center md:justify-between md:px-20 h-20">
+      <div className="flex space-x-8 py-5">
         <a
           href="https://github.com/girumgizachew1"
           target="_blank"
           rel="noopener noreferrer"
           className="contact-link"
         >
-          <FiGithub className="animate-bounce text-orange-400 text-3xl" />
+          <FiGithub className="animate-bounce text-orange-400 w-6 h-6" />
         </a>
 
         <a
@@ -20,7 +20,7 @@ function Contact() {
           rel="noopener noreferrer"
           className="contact-link"
         >
-          <FiCoffee className="animate-coffee-blow text-orange-400 text-3xl" />
+          <FiCoffee className="animate-coffee-blow text-orange-400 w-6 h-6" />
         </a>
         <a
           href="https://www.linkedin.com/in/girum-gizachew-9324b820b/"
@@ -28,7 +28,7 @@ function Contact() {
           rel="noopener noreferrer"
           className="contact-link"
         >
-          <FiLinkedin className="animate-pulse text-orange-400 text-3xl" />
+          <FiLinkedin className="animate-pulse text-orange-400 w-6 h-6" />
         </a>
       </div>
       <div className="mt-4">
