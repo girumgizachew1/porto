@@ -74,7 +74,7 @@ function Projects({ fill }) {
       <div className="basis-1/6 mx-4 flex items-center md:bg-zinc-900">
         {/* List of projects */}
         <div className="project-list flex flex-col space-y-2">
-          <h1 className='text-5xl font-bold text-orange-300' >Projects</h1>
+          <h1 className='text-2xl md:text-5xl font-bold text-orange-300' >Projects</h1>
           {projectList.map((project, index) => (
             <button
               key={index}
