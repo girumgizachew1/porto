@@ -38,7 +38,7 @@ export default function Overlay({ fill }) {
           <tspan x={20} y={444.909} children="development " />
         </text>
         <text style={{ whiteSpace: 'pre' }} fontFamily="Inter" fontSize={10.5} fontWeight={500} letterSpacing="0em">
-          <tspan x={326} y={640.318} children="Let your Project Speak about you" />
+          <tspan x={326} y={640.318} children="Let My Projects Speak about Me" />
         </text>
       </a.svg>
     </div>
