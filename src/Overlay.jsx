@@ -22,20 +22,20 @@ export default function Overlay({ fill }) {
           <tspan x={392} y={57.182} children="Next " />
           <tspan x={392} y={69.182} children="Vue" />
         </text>
-        <text style={{ whiteSpace: 'pre' }} fontFamily="Inter" fontSize={28} fontWeight={500} letterSpacing="0em">
-          <tspan x={40} y={175.318} children="Girum Gizachew " />
+        <text style={{ whiteSpace: 'pre' }} fontFamily="Inter" fontSize={26} fontWeight={500} letterSpacing="0em">
+          <tspan x={10} y={175.318} children="Girum Gizachew " />
         </text>
-        <text fill="#E8B059" style={{ whiteSpace: 'pre' }} fontFamily="Inter" fontSize={44} fontWeight="bold" letterSpacing="0em">
-          <tspan x={40} y={227.909} children={'Senior Frontend Developer \u2014'} />
+        <text fill="#E8B059" style={{ whiteSpace: 'pre' }} fontFamily="Inter" fontSize={42} fontWeight="bold" letterSpacing="0em">
+          <tspan x={10} y={227.909} children={'Senior Frontend Developer \u2014'} />
         </text>
         <text style={{ whiteSpace: 'pre' }} fontFamily="Inter" fontSize={28} fontWeight="bold" letterSpacing="0em">
           <tspan x={40} y={270.909} />
         </text>
         <text style={{ whiteSpace: 'pre' }} fontFamily="Inter" fontSize={36} fontWeight="bold" letterSpacing="0em">
-          <tspan x={40} y={321.909} children="I am a Fullstack Web  " />
-          <tspan x={40} y={362.909} children="Developer" />
-          <tspan x={40} y={403.909} children="Expert in professional Frontend" />
-          <tspan x={40} y={444.909} children="development " />
+          <tspan x={20} y={321.909} children="I am a Fullstack Web  " />
+          <tspan x={20} y={362.909} children="Developer" />
+          <tspan x={20} y={403.909} children="Expert in professional Frontend" />
+          <tspan x={20} y={444.909} children="development " />
         </text>
         <text style={{ whiteSpace: 'pre' }} fontFamily="Inter" fontSize={10.5} fontWeight={500} letterSpacing="0em">
           <tspan x={326} y={640.318} children="Let your Project Speak about you" />

@@ -26,7 +26,7 @@ function Projects({ fill }) {
       websiteLink: "watchconfig.vercel.app/"
     },
     {
-      name: "Hyab Gifts and market",
+      name: "Hyab Gifts",
       desktopView: "/WatchDesktop.jpg",
       mobileView: '/WatchPhone.jpg',
       performanceScore: '92',
@@ -70,8 +70,8 @@ function Projects({ fill }) {
 
 
   return (
-    <div className="flex flex-row-reverse mx-32 py-20 h-full" style={{ backgroundColor: '#f0f0f0' }}>
-      <div className="basis-1/6 mx-4 flex items-center bg-zinc-900">
+    <div className="flex flex-col-reverse md:flex-row-reverse mx-4 md:mx-32 md:py-20 h-full" style={{ backgroundColor: '#f0f0f0' }}>
+      <div className="basis-1/6 mx-4 flex items-center md:bg-zinc-900">
         {/* List of projects */}
         <div className="project-list flex flex-col space-y-2">
           <h1 className='text-5xl font-bold text-orange-300' >Projects</h1>
@@ -98,11 +98,11 @@ function Projects({ fill }) {
             </div>
           ) : selectedProject ? (
             <div>
-              <h2 className='text-5xl font-bold text-zinc-900' >{selectedProject.name}</h2>
+              <h2 className='text-2xl md:text-5xl font-bold text-zinc-900' >{selectedProject.name}</h2>
 
               <div className='my-4 space-y-4' >
                 <div>
-                  <p className='text-zinc-800 text-base leading-relaxed' >{selectedProject.description}</p>
+                  <p className='text-zinc-800 text-sm md:text-base leading-relaxed' >{selectedProject.description}</p>
                   <div className='flex justify-between' >
                     <div>
 

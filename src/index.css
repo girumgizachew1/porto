@@ -135,20 +135,3 @@ svg {
   transform-origin: center top;
   transform: scaleY(1);
 }
-
-
-@keyframes coffee-blow {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(15deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-.animate-coffee-blow {
-  animation: coffee-blow 2s infinite;
-}
