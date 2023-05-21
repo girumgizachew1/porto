@@ -74,7 +74,7 @@ function Projects({ fill }) {
       <div className="basis-1/6 mx-4 flex items-center md:bg-zinc-900">
         {/* List of projects */}
         <div className="project-list flex md:flex-col space-y-2">
-      <h1 className='text-2xl md:text-5xl font-bold text-orange-300'>Projects</h1>
+      <h1 className='text-2xl md:text-5xl font-bold text-orange-300 ml-4'>Projects</h1>
       <div className="dropdown sm:hidden">
         <select
           value={selectedProject ? selectedProject.name : ''}
