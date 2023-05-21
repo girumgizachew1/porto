@@ -1,6 +1,6 @@
 import React from 'react';
 import { FiGithub, FiCoffee, FiLinkedin } from 'react-icons/fi';
-
+import { Cgmail } from "react-icons/cg";
 function Contact() {
   return (
     <div className="flex w-full flex-col md:flex-row  align-center justify-between md:px-20 h-20">
@@ -29,6 +29,9 @@ function Contact() {
           className="contact-link"
         >
           <FiLinkedin className="animate-pulse text-orange-400 w-6 h-6" />
+        </a>
+        <a href="mailto:your-email@example.com">
+          <CgMail className='w-6 h-6' >
         </a>
       </div>
       <div className="mt-4 mx-auto">
