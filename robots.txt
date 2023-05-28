@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: https://girum.vercel.app/sitemap.xml
